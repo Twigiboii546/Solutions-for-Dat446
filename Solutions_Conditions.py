@@ -59,6 +59,56 @@ def pandemic_rules(numC, totalNum, population):
     return "green"
   else:
     return "green"
+  
+
+
+ ## Code of the rugby match
+def main():
+  tries = int(input("Number of tries"))
+  #print(tries)
+  conversions = int(input("Number of conversions"))
+  #print(conversions)
+  if conversions > tries:
+    print("Impossible: too many conversions or too few tries.")
+    
+  penalties = 0
+  drop_goals = 0
+  if conversions <= tries:
+    penalties = int(input("Number of penalties"))
+    #print(penalties)
+    drop_goals = int(input("Number of drop goals"))
+    #print(drop_goals)
+    points = (tries*5)+(conversions*2)+(penalties*3)+(drop_goals*3)
+    print("Game points:",points)
+  
+  pass
+# Code for the flowersale
+def calculate_flower_price(flower_count, week_number):
+  price= flower_count*20
+  if week_number >= 14 and week_number <= 17:
+    if flower_count % 2 == 0:
+      price = price/2
+    else:
+      price = (price + 20)/2
+  else:
+    if flower_count >= 200:
+      price =price *0.8
+  return int(price)
+  pass  # Implement this logic
+  
+
+
+def main():
+  flower_count = int(input("Enter the amount of flowers?"))
+  week_number = int(input("Enter what week?"))
+  print("The price is",calculate_flower_price(flower_count, week_number))
+  
+  # read input data
+  # use calculate_flower_price to do the computation
+  # print the result
+  pass
+
+ 
 
 
 #print(movieTickets(5,3,17))
