@@ -1,0 +1,2 @@
+def stringcomparer(Seq, subseq):
+    
