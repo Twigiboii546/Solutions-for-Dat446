@@ -1,3 +1,6 @@
+import os
+
+
 def codons_extract(dna, frame):
     rlist = []
     dnacut = dna[frame:].upper()
@@ -42,7 +45,7 @@ def read_dna(identifier, filepath):
             if line[0] == ">":
                 if reading == True:
                     break
-                reading = (line[i:] == identifier)
+                reading = (line[1:] == identifier)
                 continue
             if reading:
                 result += line.upper()
@@ -55,10 +58,8 @@ print(read_dna('sequence1','examples/example1.fna'))
 
 
 
-#def composition(identifier,filepath,genetic_code,start_codons,stop_codons):
-
-
-#print(codons_extract("abcDEdfaksdasdads",1))
-
-
-
+def composition(identifier,filepath,genetic_code,start_codons,stop_codons):
+    try:
+        pass
+    except FileExistsError:
+        print("Error: the sequence is not in the file")
