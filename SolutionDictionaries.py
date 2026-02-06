@@ -16,3 +16,22 @@ def word_index(input):
     else:
       index_dict[word] = [i]
   return(index_dict)
+
+# Code words
+def code_words(text, dictionary):
+  words = text.split()
+  new_text = []
+  for i in words:
+    if i in dictionary:
+      new_text.append(dictionary[i])
+    else:
+      new_text.append(i)
+  return " ".join(new_text)
+
+# Histogram
+def histogram(max_bar, labels, counts):
+    max_count = max(counts.values())
+    for label in labels:
+        count = counts[label]
+        num_stars = int(count / max_count * max_bar)
+        print(label.ljust(10) + "*" * num_stars)
